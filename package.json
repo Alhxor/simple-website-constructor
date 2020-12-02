@@ -2,9 +2,9 @@
   "name": "simple-website-constructor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel ./src/index.html -p 3000 --open --no-source-maps"
   },
   "repository": {
     "type": "git",
