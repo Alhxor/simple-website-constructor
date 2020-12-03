@@ -6,7 +6,7 @@ const $site = document.querySelector("#site");
 
 const html = model.map(block => {
   const template = templates[block.type]
-  return template(block)
+  if (template) return template(block)
 }).join('')
 
 

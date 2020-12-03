@@ -22,4 +22,5 @@ body,
 #site {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }

@@ -8,14 +8,17 @@ function title(block) {
 }
 
 function text(block) {
-  return row(col(block.value))
+  return row(col(block.value), css(block.options.style));
 }
 
 function columns(block) {
-  return row(block.value.map(col).join(''))
+  return row(block.value.map(col).join(""), css(block.options.style));
 }
 
 function image(block) {
-  return row(col(`<img src="${block.value}" />`))
+  const { style, imgStyle = {}, alt = "" } = block.options;
+  return row(
+    col(`<img src="${block.value}" style="${css(imgStyle)}" alt="${alt}" />`),
+    css(style)
+  );
 }
-
