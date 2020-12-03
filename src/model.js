@@ -1,5 +1,5 @@
 import image from "./assets/image.png";
-import { Title, Text, Columns, Image } from "./classes/Blocks";
+import { Title, Text, Columns, Image } from "./classes/blocks";
 
 export const model = [
   new Title("Simple website constructor on JavaScript", {
