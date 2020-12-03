@@ -1,8 +1,6 @@
 import "./styles/main.css";
 import { model } from "./model";
+import { Site } from "./classes/site";
 
-const $site = document.querySelector("#site");
-
-const html = model.map(block => block.toHTML()).join('')
-
-$site.insertAdjacentHTML('beforeend', html)
+const site = new Site("#site");
+site.render(model);
