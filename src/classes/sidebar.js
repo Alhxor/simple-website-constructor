@@ -1,5 +1,5 @@
 import { block } from "../utils";
-import { Title, Text, Columns, Image } from "./blocks";
+import { BlockFactory } from "./blocks";
 
 export class Sidebar {
   constructor(selector, updateCallback) {
@@ -29,16 +29,7 @@ export class Sidebar {
     const value = event.target.value.value;
     const style = event.target.style.value;
 
-    const block =
-      type === "title"
-        ? new Title(value, { style })
-        : type === "text"
-        ? new Text(value, { style })
-        : // : type === "columns"
-          // ? new Columns(value, { style })
-          // : type === "image"
-          // ? new Image(value, { style })
-          "";
+    const block = BlockFactory.createBlock(type, value, { style });
 
     this.update(block);
   }

@@ -1,8 +1,8 @@
 import image from "./assets/image.png";
-import { Title, Text, Columns, Image } from "./classes/blocks";
+import { BlockFactory } from "./classes/blocks";
 
 export const model = [
-  new Title("Simple website constructor on JavaScript", {
+  BlockFactory.createBlock('title', "Simple website constructor on JavaScript", {
     tag: "h2",
     style: {
       background: "black",
@@ -11,13 +11,13 @@ export const model = [
       padding: "1.5rem",
     },
   }),
-  new Text("This is a text block", { style: { padding: "1rem" } }),
-  new Columns(["Column #1", "Column #2", "Column #3", "Column #4"], {
+  BlockFactory.createBlock('text', "This is a text block", { style: { padding: "1rem" } }),
+  BlockFactory.createBlock('columns', ["Column #1", "Column #2", "Column #3", "Column #4"], {
     style: {
       padding: "2rem",
     },
   }),
-  new Image(image, {
+  BlockFactory.createBlock('image', image, {
     style: {
       padding: "1rem",
       "text-align": "center",

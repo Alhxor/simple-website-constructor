@@ -39,3 +39,17 @@ export class Image extends Block {
     );
   }
 }
+
+export class BlockFactory {
+  static blocks = {
+    'title': Title,
+    'text': Text,
+    'columns': Columns,
+    'image': Image
+  }
+
+  static createBlock(type = 'text', ...args) {
+    const Constructor = BlockFactory.blocks[type]
+    return new Constructor(...args)
+  }
+}
