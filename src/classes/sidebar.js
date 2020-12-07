@@ -34,11 +34,11 @@ export class Sidebar {
         ? new Title(value, { style })
         : type === "text"
         ? new Text(value, { style })
-        // : type === "columns"
-        // ? new Columns(value, { style })
-        // : type === "image"
-        // ? new Image(value, { style })
-        : "";
+        : // : type === "columns"
+          // ? new Columns(value, { style })
+          // : type === "image"
+          // ? new Image(value, { style })
+          "";
 
     this.update(block);
   }
